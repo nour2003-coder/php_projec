@@ -1,0 +1,346 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+:root {
+  --primary-color: #ffe5b4;
+  --secondary-color: #f5c18d;
+  --accent-color: #d6a56e;
+  --button-hover-color: #f6b90f;
+  --error-color: #e74c3c;
+}
+.filtersearch {
+  display: flex;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  gap: 170px;
+}
+.searchinline {
+  display: flex;
+  gap: 10px;
+}
+.searchinline button {
+  border: 1px solid #ccc;
+
+  border-radius: 10px;
+  background-color: #fafafa;
+  margin-left: -5px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.searchinline button:hover {
+  background-color: #ddd;
+  transform: translateY(-2px);
+}
+.titre {
+  background-color: var(--primary-color);
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 3px solid var(--accent-color);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titre img {
+  width: 70px;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+
+.titre h2 {
+  font-size: 1.5rem;
+  color: #3d3d3d;
+}
+
+.add {
+  background-color: white;
+  padding: 12px;
+  padding-top: 0.5px;
+  margin: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add h3 {
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  margin-bottom: 5px;
+}
+
+.add form {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.add form input[type="text"],
+.add form input[type="number"],
+.add form select {
+  font-size: 1rem;
+}
+
+.add form button.submit {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add form button.submit:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+.add form button.submit:focus-visible {
+  outline-offset: 2px;
+}
+
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+}
+
+table tr:hover {
+  background-color: #ddddddef;
+}
+
+table td a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+table td button {
+  background-color: white;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+table td button:hover {
+  background-color: #ccc;
+  transform: translateY(-2px);
+}
+
+table td button:focus-visible {
+  outline-offset: 2px;
+}
+.stars {
+  display: inline-flex;
+  direction: rtl;
+  font-size: 2rem;
+  unicode-bidi: bidi-override;
+  gap: 5px;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.stars label:hover,
+.stars label:hover ~ label {
+  color: var(--secondary-color);
+  transform: scale(1.2);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.stars input:checked ~ label {
+  color: var(--secondary-color);
+  transform: scale(1);
+}
+.controls {
+  margin: 25px;
+}
+.controls select,
+.controls button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
+.controls select:focus,
+.controls button:focus {
+  outline-color: var(--accent-color);
+}
+
+.search {
+  width: 80%;
+  max-width: 400px;
+}
+
+#book-search {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#book-search:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px rgba(255, 167, 87, 0.6);
+}
+/* Search Results Dropdown */
+#search-results {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-radius: 5px;
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search-results li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#search-results li:hover {
+  background-color: #f9f9f9;
+  color: var(--accent-color);
+}
+
+#search-results .no-results {
+  padding: 10px;
+  font-style: italic;
+  color: #aaa;
+  text-align: center;
+}
+
+/* Error Message Styling */
+.erreur {
+  display: block;
+  color: var(--error-color);
+  font-size: 1.1rem;
+  padding: 10px;
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+/* Edit Page: Center content and add margin */
+.edit {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="radio"] {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+form button.submit {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button.submit:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+form button.submit:focus-visible {
+  outline-offset: 2px;
+}
+
+.edit h2 {
+  margin-top: 2px;
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+.edit button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit button:hover {
+  background-color: var(--button-hover-color);
+  transform: translateY(-2px);
+}
+
+.edit button:focus-visible {
+  outline-offset: 2px;
+}
+.stars-display .star {
+  font-size: 1.5rem; /* Adjust size */
+  color: #ccc; /* Default color for empty stars */
+}
+.stars-display .star.filled {
+  color: #f5c518; /* Highlighted color for filled stars */
+}
