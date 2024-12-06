@@ -7,7 +7,6 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM Livres WHERE id = $id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Book deleted successfully!";
         header("Location: index.php");
         exit;
     } else {

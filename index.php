@@ -1,7 +1,7 @@
 <?php
-include 'db.php'; // Include the database connection
+include 'db.php'; 
 $message_erreur = "";
-$message_erreur = "";
+
 
 if (isset($_POST['add'])) {
     $titre = $_POST['titre'];
@@ -29,11 +29,11 @@ if (isset($_POST['add'])) {
         }
     }
 }
-// Initialize variables for filtering and sorting
+
 $filter_status = isset($_GET['filter_status']) ? $_GET['filter_status'] : '';
 $sort_order = isset($_GET['sort_order']) ? $_GET['sort_order'] : '';
 
-// Build the SQL query
+
 $sql = "SELECT * FROM livres";
 
 // Apply filtering

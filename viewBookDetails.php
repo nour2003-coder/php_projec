@@ -1,7 +1,7 @@
 <?php
-include 'db.php'; // Include your database connection
+include 'db.php'; 
 
-// Check if the 'title' is provided in the query string
+
 if (isset($_GET['title'])) {
     $title = $conn->real_escape_string($_GET['title']);
     $sql = "SELECT * FROM livres WHERE titre LIKE '%$title%'";
@@ -29,6 +29,7 @@ if (isset($_GET['title'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Details</title>
+    
     <style>
         table {
             width: 100%;

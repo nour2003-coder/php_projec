@@ -3,10 +3,10 @@ document.getElementById('search').addEventListener('click', function () {
     const resultsList = document.getElementById('search-results');
     const query = searchInput.value.trim();
 
-    // Clear previous results
+    
     resultsList.innerHTML = '';
 
-    // Check if query is empty
+    
     if (query === '') {
         resultsList.innerHTML = '<li>Please enter a book title to search.</li>';
         return;

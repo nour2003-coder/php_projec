@@ -1,7 +1,7 @@
 <?php
 $servername = "127.0.0.1";
 $username = "root";
-$password = ""; // Replace with your MySQL password
+$password = ""; 
 $dbname = "bibliotheque";
 
 

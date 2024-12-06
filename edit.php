@@ -68,7 +68,7 @@ if (isset($_POST['update'])) {
         <input type="radio" id="star1" name="note" value="1" <?php echo $book['note'] == 1 ? 'checked' : ''; ?>>
         <label for="star1">★</label>
     </div>
-        <br><br>
+        <br> <br>
 
         <button type="submit" name="update">Update Book</button>
     </form>
